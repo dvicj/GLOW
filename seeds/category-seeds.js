@@ -30,6 +30,9 @@ const categoryData = [
     },
     {
         category_name: 'Treatments' //10
+    },
+    {
+        category_name: 'Lip Products' //11
     }
 ];
 

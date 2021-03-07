@@ -60,6 +60,9 @@ const tagData = [
     },
     {
         tag_name: 'Plumping'
+    },
+    {
+        tag_name: 'Defence'
     }
 ];
 

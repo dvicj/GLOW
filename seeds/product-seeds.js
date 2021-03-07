@@ -298,6 +298,16 @@ const productData = [
     stock: 3, 
     category_id: 8, 
   },
+  {//sheet mask 8
+    product_name: 'Rice',
+    brand: 'Missha',
+    category_id: 8,
+  },
+  {//sheet mask 8
+    product_name: 'Madecassoside',
+    brand: 'Etude House',
+    category_id: 8,
+  },
   {//eye product 9
     product_name: 'Avocade Melt Retinol Eye Sleeping Mask',
     brand: 'Glow Recipe',
@@ -319,7 +329,92 @@ const productData = [
     brand: 'The Ordinary',
     category_id: 10,
 
-  }
+  },
+  {//lip 11 
+    product_name: 'Lip Glowy Balm Peach',
+    brand: 'Laneige',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Lip Glow Balm Pear',
+    brand: 'Laneige',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Lip Glowy Balm Gummy Bear',
+    brand: 'Laneige',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Lip Sleeping Mask Sweet Candy',
+    brand: 'Laneige',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Coconut Balm Dot Com',
+    brand: 'Glossier',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Rose Balm Dot Com',
+    brand: 'Glossier',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Birthday Cake Balm Dot Com',
+    brand: 'Glossier',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Mango Balm Dot Com',
+    brand: 'Glossier',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Juicebar Lip Oil',
+    brand: 'Sophia+Mabelle',
+    category_id: 11, 
+  },
+  {//lip 11
+    product_name: 'Pink Bubbly Lip Therapy',
+    brand: 'Vaseline',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Strawberry Jelly Glaze',
+    brand: 'Tarte',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Lip Crush Lip Oil',
+    brand: 'TPSY',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Vanillamint Supreme',
+    brand: 'CO. Bigelow',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Berry+Juice Lip Gel',
+    brand: 'Seraphine Botanicals',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Watermelon Burst Hydrating Lip Oil',
+    brand: 'Ciate London',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Hydro Care',
+    brand: 'Nivea',
+    category_id: 11,
+  },
+  {//lip 11
+    product_name: 'Pearly Shine',
+    brand: 'Nivea',
+    category_id: 11,
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
