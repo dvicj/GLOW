@@ -1,47 +1,47 @@
 const { Product } = require('../models');
 
 const productData = [
-  {//cleansing balm 1
+  {//cleansing balm 1 //1
     product_name: 'Papaya Sorbet Smoothing Enzyme Cleansing Balm & Makeup Remover',
     brand: 'Glow Recipe',
     category_id: 1
   },
-  {//cleansing balm 1
+  {//cleansing balm 1 //2
     product_name: 'Day Dissolve Cleansing Balm',
     brand: 'Versed',
     category_id: 1
   },
-  {//skin cleanser 2
+  {//skin cleanser 2 //3
     product_name: 'Blueberry Bounce Gentle Cleanser',
     brand: 'Glow Recipe',
     category_id: 2,
   },
-  {//skin cleanser 2
+  {//skin cleanser 2 //4
     product_name: 'Cerave Foaming Facial Cleanser',
     brand: 'Cerave',
     category_id: 2,
   },
-  {//skin cleanser 2
+  {//skin cleanser 2 //5
     product_name: 'Micellar Water ',
     brand: 'Garnier',
     category_id: 2,
   },
-  {//toner 3
+  {//toner 3 //6
     product_name: 'Watermelon Glow PHA+BHA Pore-Tight Toner',
     brand: 'Glow Recipe',
     category_id: 3, 
   },
-  {//toner 3
+  {//toner 3 //7 
     product_name: 'Glycolic Acid 7% Toning Solution',
     brand: 'The Ordinary',
     category_id: 3, 
   },
-  {//serum 4
+  {//serum 4 //8
     product_name: 'Watermelon Glow Niacinimide Dew Drops',
     brand: 'Glow Recipe',
     category_id: 4,
   },
-  {//serum 4
+  {//serum 4 //9 
     product_name: 'Mandelic Acid 10% + HA',
     brand: 'The Ordinary',
     category_id: 4.
@@ -117,7 +117,7 @@ const productData = [
     category_id: 6, 
   },
   {//masks 7 
-    category_name: 'Salicylic Acid 2% Masque',
+    product_name: 'Salicylic Acid 2% Masque',
     brand: 'The Ordinary',
     category_id: 7,
   },
@@ -336,7 +336,7 @@ const productData = [
     category_id: 11, 
   },
   {//lip 11
-    product_name: 'Lip Glow Balm Pear',
+    product_name: 'Lip Glowy Balm Pear',
     brand: 'Laneige',
     category_id: 11, 
   },
