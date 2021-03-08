@@ -4,12 +4,12 @@ const $displayArea = document.querySelector('#display-area');
 const printResults = resultArr => {
     console.log(resultArr);
 
-    const categoryHTML = resultArr.map(({ id, name }) => {
+    const categoryHTML = resultArr.map(({ id, category_name }) => {
         return `
         
         <div>
             <div data-id=${id}>
-                <h4>${name}</h4>
+                <h4>${category_name}</h4>
             </div>
         </div>
         
