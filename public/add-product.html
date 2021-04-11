@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>amGLOWpm</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <a href="/">
+        <h1>amGLOWpm</h1>
+      </a>
+
+      <h3>
+        Add your product...
+      </h3>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <h2>Create new product to add to your inventory!</h2>
+    </div>
+
+    <section>
+      <h2>Here we go</h2>
+      <div>
+        <div class="form-container">
+          <form id="product-form">
+            <div>
+              <label for="product-name" class="form-label">Product Name</label>
+              <input type="text" id="product-name" name="product-name" class="form-input" placeholder="Enter Product Name"
+                required />
+            </div>
+            <div>
+                <label for="brand-name" class="form-label">Brand Name</label>
+                <input type="text" id="brand-name" name="brand-name" class="form-input" placeholder="Enter Brand Name"
+                  required />
+            </div>
+            <div>
+              <label for="created-by" class="form-label">Who's Product is this?</label>
+              <input type="text" id="created-by" name="created-by" class="form-input" placeholder="Give us your name"
+                required />
+            </div>
+            <!-- <div>
+              <label for="quantity" class="form-label">Quantity</label>
+              <select id="quantity" class="form-input">
+                <option value="One">Personal</option>
+                <option value="Two">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Extra Large">Extra Large</option>
+              </select>
+            </div> -->
+            <h3>Choose your categories</h3>
+            <div>
+              <div>
+                  <h3> Makeup Products: </h3>
+                <div>
+                  <input type="checkbox" id="lip-product" name="category" value="Lip Product">
+                  <label for="lip-product">Lip Product</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="eyeshadow" name="category" value="Eyeshadow">
+                  <label for="eyeshadow">Eyeshadow</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="eyeliner" name="category" value="Eye Liner">
+                  <label for="eyeliner">Eye Liner</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="eyebrow" name="category" value="Eyebrow Product">
+                  <label for="eyebrow">Eyebrow Product</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="blush" name="category" value="Blush">
+                  <label for="blush">Blush</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="bronzer" name="category" value="Bronzer">
+                  <label for="bronzer">Bronzer</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="highlighter" name="category" value="Highlighter">
+                    <label for="highlighter">Highlighter</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="concealer" name="category" value="Concealer">
+                  <label for="concealer">Concealer</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="foundation" name="category" value="Foundation">
+                  <label for="foundation">Foundation</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="powder" name="category" value="Powder">
+                  <label for="powder">Powder</label>
+                </div>
+            </div>
+            <div>
+                <h3>Skincare Products: </h3>
+
+                <div>
+                  <input type="checkbox" id="cleanser" name="category" value="Cleanser">
+                  <label for="cleanser">Cleanser</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="toner" name="category" value="Toner">
+                  <label for="toner">Toner</label>
+                </div>
+
+                <div>
+                  <input type="checkbox" id="serum" name="category" value="Serum">
+                  <label for="serum">Serum</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="oil" name="category" value="Oil">
+                    <label for="oil">Oil</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="mask" name="category" value="Mask">
+                    <label for="mask">Mask</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="sheet-mask" name="category" value="Sheet Mask">
+                    <label for="sheet-mask">Sheet Mask</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="eye-treatment" name="category" value="Eye Treatment">
+                    <label for="eye-treatment">Eye Treatment</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="spot-treatment" name="category" value="Spot Treatment">
+                    <label for="spot-treatment">Spot Treatment</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="moisturizer" name="category" value="Moisturizer">
+                    <label for="moisturizer">Moisturizer</label>
+                </div>
+
+            </div>
+
+              <!-- custom categories -->
+              <div>
+                <div id="custom-categories-list"></div>
+              </div>
+            </div>
+
+            <div></div>
+
+            <label for="new-category" class="form-label">Add another category to the list!</label>
+            <input type="text" id="new-category" name="new-category" class="form-input" placeholder="Add Category" />
+
+            <button type="button" id="add-category">Add Category</button>
+
+            <div></div>
+
+            <button type="submit" class="btn w-100 m-auto">Submit Product</button>
+          </form>
+        </div>
+    </section>
+
+    <section>
+      <h2>Looking to do something else?</h2>
+      <nav>
+        <a href="/">See All Products.</a>
+      </nav>
+    </section>
+
+    </div>
+  </main>
+  <script src="./assets/js/add-product.js"></script>
+  <script src="./assets/js/idb.js"></script>
+</body>
+
+</html>
