@@ -1,28 +1,34 @@
-const { Model, DataTypes } = require('sequelize');
+const { Schema, model, Types } = require('mongoose');
+const moment = require('moment');
 
-const sequelize = require('../config/connection.js');
-
-class Category extends Model {}
-
-Category.init(
+const CategorySchema = new Schema (
   {
-    id: {
-        type: DataTypes.INTEGER, 
-        allowNull: false, 
-        primaryKey: true, 
-        autoIncrement: true, 
-    }, 
-    category_name: {
-        type: DataTypes.STRING
-    }
+      categoryText: {
+          type: String,
+          required: true,
+          minlength: 1,
+          maxlength: 280
+      },
+      createdAt: {
+          type: Date,
+          default: Date.now,
+          get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
+      },
+      username: {
+          type: String,
+          required: true,
+          ref: 'User'
+      }
   },
   {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'category',
-  }
-);
+    toJSON: {
+      virtuals: true,
+      getters: true
+    },
+    id: false
+}
+)
+
+const Category = model('Category', CategorySchema);
 
 module.exports = Category;

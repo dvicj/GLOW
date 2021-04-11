@@ -1,51 +1,74 @@
-// import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
-// import our database connection from config.js
-const sequelize = require('../config/connection');
+const { Schema, model, Types } = require('mongoose');
+const moment = require('moment');
 
-// Initialize Product model (table) by extending off Sequelize's Model class
-class Product extends Model {}
-
-// set up fields and rules for Product model
-Product.init(
+const TagSchema = new Schema(
     {
-      id: {
-        type: DataTypes.INTEGER, 
-        allowNull: false, 
-        primaryKey: true, 
-        autoIncrement: true,  
+      // set custom id to avoid confusion with parent comment _id
+      tagId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId()
       },
-      product_name: {
-        type: DataTypes.STRING, 
+      tagBody: {
+        type: String,
+        required: true,
+        trim: true,
+        minlength: 1,
+        maxlength: 280
       },
-      brand: {
-        type: DataTypes.STRING, 
-        allowNull: false
+      username: {
+        type: String,
+        required: true,
       },
-      stock: {
-        type: DataTypes.INTEGER, 
-        allowNull: false,
-        defaultValue: 1,
-        validate: {
-          isNumeric: true
-        }
-      },
-      category_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'category',
-          key: 'id'
-        },
+      createdAt: {
+        type: Date,
+        default: Date.now,
+        get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
       }
     },
     {
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'product',
+      toJSON: {
+        getters: true
+      }
     }
   );
-  
-  module.exports = Product;
+
+const ProductSchema = new Schema (
+    {
+        productText: {
+            type: String,
+            required: true,
+            minlength: 1,
+            maxlength: 280
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
+        },
+        username: {
+            type: String,
+            required: true,
+            ref: 'User'
+        },
+        tags: [TagSchema],
+    },
+    {
+      toJSON: {
+        virtuals: true,
+        getters: true
+      },
+      id: false
+  }
+)
+
+
+const Product = model('Product', ProductSchema);
+
+  // get total count of friends on retrieval
+  ProductSchema.virtual('tagCount').get(function() {
+    return this.tags.length;
+  });
+
+
+module.exports = Product;
 
